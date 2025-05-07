@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NU Transit Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-purple-800 mb-2">NU Transit Tracker</h1>
+            <p class="text-gray-600">Track your ride from Evanston to Downtown Chicago</p>
+        </header>
+
+        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6">
+            <form id="searchForm" class="mb-6 flex flex-col md:flex-row gap-4 items-center justify-between">
+                <select id="startLocation" class="p-2 border rounded w-full md:w-auto">
+                    <option value="evanston_main">Evanston Main</option>
+                    <option value="evanston_north">Evanston North</option>
+                    <option value="evanston_south">Evanston South</option>
+                </select>
+                <span class="hidden md:inline">to</span>
+                <select id="endLocation" class="p-2 border rounded w-full md:w-auto">
+                    <option value="downtown_union">Downtown Union Station</option>
+                    <option value="downtown_michigan">Michigan Ave</option>
+                    <option value="downtown_loop">The Loop</option>
+                </select>
+                <input type="time" id="desiredTime" class="p-2 border rounded w-full md:w-auto" />
+                <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">Search</button>
+            </form>
+            <div class="mb-6">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Next Departures</h2>
+                <div id="busSchedule" class="space-y-4">
+                    <!-- Bus schedule will be populated here -->
+                    <div class="animate-pulse">
+                        <div class="h-4 bg-gray-200 rounded w-3/4"></div>
+                        <div class="space-y-3 mt-4">
+                            <div class="h-4 bg-gray-200 rounded"></div>
+                            <div class="h-4 bg-gray-200 rounded w-5/6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button id="refreshBtn" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                    Refresh Schedule
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
