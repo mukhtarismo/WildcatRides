@@ -36,9 +36,9 @@ A real-time bus tracking application for Northwestern University students travel
 - Express
 - CTA Bus Tracker API
 
-## Note
 
-This is an MVP version. The current implementation uses mock data. To use real CTA data, you'll need to:
-1. Obtain a CTA Bus Tracker API key
-2. Update the server.js file with actual stop IDs
-3. Implement real API calls to the CTA Bus Tracker API 
+
+### Future features
+
+-Rideshare
+-improve UI
